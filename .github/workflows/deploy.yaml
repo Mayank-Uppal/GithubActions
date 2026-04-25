@@ -97,3 +97,10 @@ jobs:
             mayankuppal/mern-frontend:${{ github.sha }}
         env:
           VITE_API_URL: ${{ secrets.VITE_API_URL }}
+      
+
+      - name: Trigger Render backend redeploy
+        run: curl -X POST "${{ secrets.RENDER_BACKEND_HOOK }}"
+
+      - name: Trigger Render frontend redeploy
+        run: curl -X POST "${{ secrets.RENDER_FRONTEND_HOOK }}"
