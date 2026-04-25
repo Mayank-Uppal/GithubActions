@@ -1,0 +1,16 @@
+
+services:
+
+    backend:
+        build: ./server
+        ports:
+            - "3001:3001"
+        environment:
+            - MONGO_URI=mongodb+srv://myank07official:Mayank%409550@mayank.jzywnhr.mongodb.net/Notes
+
+    frontend:
+        build: ./client
+        ports:
+            - "4173:4173"
+        depends_on:
+            - backend
