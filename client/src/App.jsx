@@ -28,7 +28,7 @@ function App() {
 
   return (
     <div style={{ fontFamily: "sans-serif", maxWidth: 500, margin: "40px auto" }}>
-      <h2>📝 MERN Docker App</h2>
+      <h2>MERN Docker App</h2>
       <input value={text} onChange={e => setText(e.target.value)}
         placeholder="Enter a note..." style={{ padding: 8, width: "70%" }} />
       <button onClick={addNote} style={{ padding: 8, marginLeft: 8 }}>Add</button>
