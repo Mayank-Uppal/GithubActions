@@ -9,7 +9,7 @@ function App() {
 
   useEffect(()=>{
     const getData=async()=>{
-      const res=await axios.get(`${import.meta.env.VITE_API_URL}/api/notes`)
+      const res=await axios.get("https://mern-backend-latest-f6qp.onrender.com/api/notes")
       console.log(res.data);
     }
     getData()
@@ -17,7 +17,7 @@ function App() {
 
   const addNote=async()=>{
     try {
-       const res=await axios.post(`${import.meta.env.VITE_API_URL}/api/notes`,{text});
+       const res=await axios.post("https://mern-backend-latest-f6qp.onrender.com/api/notes",{text});
        setNotes([...notes, res.data]); // update UI
         setText(""); // clear input
        console.log(res.data);
